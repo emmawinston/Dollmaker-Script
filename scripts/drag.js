@@ -9,12 +9,22 @@ $(document).ready(function() {
 				distance: 0		
 		});
 		
+		//Sets what happens when you release a piece
+		$("#bodyArea").droppable({	
+			drop: function(event, ui){
+				//this is so that the element "sticks" even when tab is changed.
+				ui.draggable.addClass("draggedout");			
+			},
+			//changes current tab to the tab the piece belongs to when dragged out of body area
+			out: function(event, ui){
+				ui.draggable.removeClass("draggedout");
+				var whichTab = ui.draggable.parent().attr("id");
+				$("#piecesArea").tabs('select' , whichTab);
+			}
+		});
+		
 		//tabs
 		$("#piecesArea").tabs();
-	
-	
-	function baseSwitch(element){
-	
 	}
 	
 	//changes the body when thumbnails are clicked	
