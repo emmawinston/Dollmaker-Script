@@ -20,7 +20,7 @@ color: #666;
 /* This specifies styles that will affect all the boxes. Change to your own colors!*/
 #bodyArea, #swatchesArea, .ui-tabs-panel{
 border: 1px solid #888;
-background: #ddd;
+background: #eee;
 }
 
 /* NOTE: You can change the colors for the tabs further below . . . .*/
@@ -54,7 +54,7 @@ left: 30px;
 position: absolute;
 top: 0px;
 width: 250px;
-height: 570px;
+height: 270px;
 text-align: center;
 }
 
@@ -69,7 +69,7 @@ text-align: center;
 /* The area under the base that has links for skintones */
 #swatchesArea { 
 position: absolute; 
-top: 570px;
+top: 270px;
 width: 240px;
 padding: 0px 5px;
 }
