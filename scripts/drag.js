@@ -25,7 +25,8 @@ $(document).ready(function() {
 		
 		//tabs
 		$("#piecesArea").tabs();
-	}
+	
+
 	
 	//changes the body when thumbnails are clicked	
 	$("#swatchesArea a").click( function() {
