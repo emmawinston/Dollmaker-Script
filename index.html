@@ -5,9 +5,10 @@
 	<title>Dollmaker</title>
 	<link rel="stylesheet" type="text/css" href="styles/mainstylesheet.css" charset="utf-8">
 	
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
-	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.min.js"></script>
-	<script src="scripts/touchpunch.js"></script>
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+<script src="scripts/touchpunch.js"></script>
+		<!--script src="scripts/drag.js"></script-->
 </head>
 
 <body>
@@ -77,6 +78,7 @@
 	</div><!--PiecesArea-->			
 
 </div><!--container-->
-<script type="text/javascript" src="scripts/drag.js"></script>
+
+<script>$("#piecesArea > div > img").draggable();</script>
 </body>
 </html>
