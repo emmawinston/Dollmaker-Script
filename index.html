@@ -7,7 +7,7 @@
 	
 	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
 <script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
-<script src="scripts/touchpunch.js"></script>
+<!--script src="scripts/touchpunch.js"></script-->
 </head>
 
 <body>
@@ -79,14 +79,8 @@
 </div><!--container-->
 
 <script>
-$(document).ready(function() {
-		
 		//Makes the pieces draggable & sets options
-		$("#piecesArea > div > img").draggable({ 
-				//Makes it so that the pieces' z-index can be reordered
-				stack: { group: '#piecesArea > div > img', min: 500,scroll: false },
-				distance: 0		
-		});
+		$("#piecesArea > div > img").draggable();
 		
 		//Sets what happens when you release a piece
 		$("#bodyArea").droppable({	
@@ -101,16 +95,16 @@ $(document).ready(function() {
 				$("#piecesArea").tabs('select' , whichTab);
 			}
 		});
-	
+		
+		//tabs
+		$("#piecesArea").tabs();
 	
 	//changes the body when thumbnails are clicked	
 	$("#swatchesArea a").click( function() {
 		var changeSrc = $(this).attr("href");
 		$("#bodyArea>img").attr("src", changeSrc);
 		return false;
-	});
-	
-}); 
+	}); 
 </script>
 </body>
 </html>
