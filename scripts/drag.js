@@ -37,4 +37,5 @@ $(document).ready(function() {
 		$("#bodyArea>img").attr("src", changeSrc);
 		return false;
 	});
+	
 }); 
