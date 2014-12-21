@@ -15,7 +15,6 @@
 /*----------------------------------------------*/
 /*These are needed for the tab functionality and drag/drop functionality to work*/
 .ui-tabs-hide 			{ visibility:hidden;}
-.ui-tabs-panel { position:absolute; width:100%;}
 
 .draggedout { visibility:visible; position:absolute;}
 
@@ -33,6 +32,17 @@ color: #666;
 #bodyArea, #swatchesArea, .ui-tabs-panel{
 border: 2px solid #888;
 background: #eee;
+}
+
+.ui-tabs-panel {
+    position: absolute;
+    width: 653px;
+}
+
+h1.title {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 40px;
 }
 
 /* NOTE: You can change the colors for the tabs further below . . . .*/
@@ -54,17 +64,42 @@ background: #eee;
 /*This div contains the whole dollmaker. It can be placed anywhere on the page and everything will follow
   Keep the height unspecified so that it can stretch to accomodate varied number of pieces */
 #dollmaker_container {
-position: absolute;
-top: 30px; /*Change these values to whatever you want*/
-left: 30px;
+/* position: absolute;
+top: 30px;
+left: 30px; */
+width: 943px;
+margin: 40px auto;
+}
+
+@media screen and (max-width: 1070px) {
+    #dollmaker_container {
+        width: 843px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    #dollmaker_container {
+        width: 743px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #dollmaker_container {
+        width: 90%;
+    }
 }
 
 /*-------------------------------------------------------------------*/
 /* The box that contains the basebody */
 #bodyArea
 {
-position: absolute;
+/* position: absolute;
 top: 0px;
+width: 250px;
+height: 270px;
+text-align: center; */
+float: left;
+position: relative;
 width: 250px;
 height: 270px;
 text-align: center;
@@ -80,10 +115,14 @@ text-align: center;
 /*-------------------------------------------------------------------*/
 /* The area under the base that has links for skintones */
 #swatchesArea { 
-position: absolute; 
+/* position: absolute; 
 top: 270px;
 width: 240px;
-padding: 0px 5px;
+padding: 0px 5px; */
+float: left;
+clear: left;
+width: 250px;
+margin-top: -2px;
 }
 
 /* individual links for thumbnails */
@@ -111,11 +150,109 @@ padding: 7px 0 5px 0;
 }
 
 /*-------------------------------------------------------------------*/
+
+#left {
+    float: left;
+    width: 254px;
+}
+
+#right {
+    width: 653px;
+    float: left;
+    padding-left: 36px;
+
+}
+
+@media screen and (max-width: 1070px) {
+    #right {
+        width: 553px;
+        position: relative;
+    }
+
+    .ui-tabs-panel {
+        width: 523px;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    #right {
+        width: 453px;
+        position: relative;
+    }
+
+    .ui-tabs-panel {
+        width: 423px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    #left, #right {
+        float: none;
+        clear: both;
+        margin: 0 auto;
+    }
+
+    #left {
+        margin-bottom: 40px;
+        overflow: hidden;
+    }
+
+    #right {
+        padding-left: 0px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    #right, .ui-tabs-panel, #tabsbar {
+        width: 300px;
+    }
+
+    .ui-tabs-panel, #tabsbar {
+        right: 0;
+        margin-left: -150px;
+    }
+
+    #tabsbar {
+        margin-left: -20px;
+    }
+
+    #tabsbar li a {
+        padding: 3px 5px 4px; 
+    }
+
+    #tabsbar li a {
+        font-size: 0.66em;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #right, .ui-tabs-panel, #tabsbar {
+        width: 250px;
+        box-sizing: border-box;
+    }
+
+    #left {
+        margin-bottom: 20px;
+    }
+
+    .ui-tabs-panel, #tabsbar {
+        margin: 0 auto;
+    }
+
+     #tabsbar li a {
+        padding: 3px 3px 4px; 
+    }
+
+    #tabsbar li a {
+        font-size: 0.4em;
+    }
+}
+
+
 /*The tabbed area at the right that contains all the draggable pieces*/
 #piecesArea {
-position: absolute; 
-left: 275px;
-width: 625px;
+/* position: absolute; 
+left: 275px; */
 }
 
 /*Positioning for tabs area*/
