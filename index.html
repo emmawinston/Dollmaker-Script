@@ -7,7 +7,8 @@
 	
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
-<!--script src="scripts/touchpunch.js"></script-->
+<script src="scripts/drag.js"></script>
+<script src="scripts/touchpunch.js"></script>
 </head>
 
 <body>
@@ -39,6 +40,7 @@
 					<li><a href="#tabs-3">Tops</a></li>
 					<li><a href="#tabs-4">Bottoms</a></li>
 					<li><a href="#tabs-5">Dresses</a></li>
+					<li><a href="#tabs-6">Accessories</a></li>
 				</ul>
 				
 				<!-- **EDIT HERE** 
@@ -94,45 +96,23 @@
 					<img alt="" src="images/4Dresses/dress_overall_beige.png">
 					<img alt="" src="images/4Dresses/jumpsuit_polka.png">
 				</div>
+				<div id="tabs-6"><!--Accessories-->
+					<img alt="" src="images/5Accessories/boots-black.png">
+					<img alt="" src="images/5Accessories/boots-ivory.png">
+					<img alt="" src="images/5Accessories/boots-lilac.png">
+					<img alt="" src="images/5Accessories/boots-pink.png">
+					<img alt="" src="images/5Accessories/shoes-black.png">
+					<img alt="" src="images/5Accessories/shoes-mustard.png">
+					<img alt="" src="images/5Accessories/socks-grey.png">
+					<img alt="" src="images/5Accessories/socks-mint.png">
+					<img alt="" src="images/5Accessories/socks-mustard.png">
+				
+				</div>
 				
 			</div><!--PiecesArea-->			
 		</div>
 	</div><!--container-->
 
 </div>
-
-<script>
-		//Makes the pieces draggable & sets options
-		//Makes the pieces draggable & sets options
-		$("#piecesArea > div > img").draggable({ 
-				//Makes it so that the pieces' z-index can be reordered
-		stack: '#piecesArea > div > img', min: 500,scroll: false,
-				distance: 0		
-		});
-		
-		//Sets what happens when you release a piece
-		$("#bodyArea").droppable({	
-			drop: function(event, ui){
-				//this is so that the element "sticks" even when tab is changed.
-				ui.draggable.addClass("draggedout");			
-			},
-			//changes current tab to the tab the piece belongs to when dragged out of body area
-			out: function(event, ui){
-				ui.draggable.removeClass("draggedout");
-				var whichTab = ui.draggable.parent().attr("id");
-				$("#piecesArea").tabs('select' , whichTab);
-			}
-		});
-		
-		//tabs
-		$("#piecesArea").tabs();
-	
-	//changes the body when thumbnails are clicked	
-	$("#swatchesArea a").click( function() {
-		var changeSrc = $(this).attr("href");
-		$("#bodyArea>img").attr("src", changeSrc);
-		return false;
-	}); 
-</script>
 </body>
 </html>
