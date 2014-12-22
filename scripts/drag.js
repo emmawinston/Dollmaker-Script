@@ -3,9 +3,10 @@
 $(document).ready(function() {
 		
 		//Makes the pieces draggable & sets options
+		//Makes the pieces draggable & sets options
 		$("#piecesArea > div > img").draggable({ 
 				//Makes it so that the pieces' z-index can be reordered
-				stack: { group: '#piecesArea > div > img', min: 500,scroll: false },
+		stack: '#piecesArea > div > img', min: 500,scroll: false,
 				distance: 0		
 		});
 		
@@ -31,6 +32,10 @@ $(document).ready(function() {
 		var changeSrc = $(this).attr("href");
 		$("#bodyArea>img").attr("src", changeSrc);
 		return false;
-	});
+	}); 
+});
+
 	
-}); 
+	
+
+
