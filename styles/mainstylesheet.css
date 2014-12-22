@@ -132,7 +132,7 @@ text-align: center;
 img.bg {position: absolute: left: 0; top: 0; z-index: 1;}
 
 img.skintone {
-    position: absolute; left: 50%; top: 50%; margin-left: -58px; margin-top: -128px; z-index: 2;
+    width: 117px; height: 257px; position: absolute; left: 50%; top: 50%; margin-left: -58px; margin-top: -128px; z-index: 2;
 }
 
 .btn {
