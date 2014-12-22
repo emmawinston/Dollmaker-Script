@@ -5,16 +5,18 @@
 	<title>Dollmaker</title>
 	<link rel="stylesheet" type="text/css" href="styles/mainstylesheet.css" charset="utf-8">
 	
-	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-<script src="http://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
-<script src="scripts/touchpunch.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+<!--script src="scripts/touchpunch.js"></script-->
 </head>
 
 <body>
 
 <div id="wrapper">
 	<div id="dollmaker_container">
-		<h1 class="title">THE WHITEPEPPER Dollmaker</h1>
+		<div id="header">
+			<img src="images/logo.png"/>
+		</div>
 		<div id="left">
 			<div id="bodyArea" class="ui-corner-all">
 			<img class="skintone" src="base/Skintone/full/light.png" alt="BaseBody">
@@ -45,9 +47,21 @@
 				-->
 				
 				<div id="tabs-2"><!--Hair-->
-					<img alt="" src="images/1Hair/hair_long.png">
-					<img alt="" src="images/1Hair/hair_short_dark.png">
-					<img alt="" src="images/1Hair/hair_short_green.png">
+					<img alt="" src="images/1Hair/hair-bun-blonde.png" id="go">
+					<img alt="" src="images/1Hair/hair-bun-brown.png" id="go">
+					<img alt="" src="images/1Hair/hair-bun-ginger.png">
+					<img alt="" src="images/1Hair/hair-bun-red.png">
+					<img alt="" src="images/1Hair/hair-long-blonde.png">
+					<img alt="" src="images/1Hair/hair-long-brown.png">
+					<img alt="" src="images/1Hair/hair-long-ginger.png">
+					<img alt="" src="images/1Hair/hair-short-brown.png">
+					<img alt="" src="images/1Hair/hair-short-dipgreen.png">
+					<img alt="" src="images/1Hair/hair-straight-dipblue.png">
+					<img alt="" src="images/1Hair/hair-straight-dippink.png">
+					<img alt="" src="images/1Hair/hair-straight-blonde.png">
+					<img alt="" src="images/1Hair/hair-straight-brown.png">
+					<img alt="" src="images/1Hair/hair-straight-pink.png">
+					<img alt="" src="images/1Hair/hair-straight-red.png">
 				</div>
 				<div id="tabs-3"><!--Tops-->
 					<img alt="" src="images/2Tops/top_egg.png">
@@ -62,6 +76,7 @@
 				<div id="tabs-4"><!--Bottoms-->
 					<img alt="" src="images/3Bottoms/skirt_egg.png">
 					<img alt="" src="images/3Bottoms/skirt_flared_red.png">
+					<img alt="" src="images/3Bottoms/skirt-flared-blue.png">
 					<img alt="" src="images/3Bottoms/skirt_pleated_silver.png">
 					<img alt="" src="images/3Bottoms/leggings_check.png">
 					<img alt="" src="images/3Bottoms/leggings_polka_grey.png">
@@ -73,6 +88,7 @@
 					<img alt="" src="images/4Dresses/dress_polka_black.png">
 					<img alt="" src="images/4Dresses/dress_polka_white.png">
 					<img alt="" src="images/4Dresses/dress_sequin.png">
+					<img alt="" src="images/4Dresses/dress-polka-pink.png">
 					<img alt="" src="images/4Dresses/dress_shimmer.png">
 					<img alt="" src="images/4Dresses/dress_overall_black.png">
 					<img alt="" src="images/4Dresses/dress_overall_beige.png">
@@ -87,7 +103,12 @@
 
 <script>
 		//Makes the pieces draggable & sets options
-		$("#piecesArea > div > img").draggable();
+		//Makes the pieces draggable & sets options
+		$("#piecesArea > div > img").draggable({ 
+				//Makes it so that the pieces' z-index can be reordered
+		stack: '#piecesArea > div > img', min: 500,scroll: false,
+				distance: 0		
+		});
 		
 		//Sets what happens when you release a piece
 		$("#bodyArea").droppable({	

@@ -24,7 +24,7 @@
 body {
 font-family: 'pixelmixregular', sans-serif;
 font-size: 1em;
-background: #eee;
+background: #fff;
 color: #666;
 }
 
@@ -36,13 +36,20 @@ background: #eee;
 
 .ui-tabs-panel {
     position: absolute;
-    width: 653px;
+    width: 630px;
 }
 
 h1.title {
     font-size: 2em;
     text-align: center;
-    padding-bottom: 40px;
+    margin-bottom: 40px;
+    background: #eee;
+    border: 2px solid #888;
+    padding: 20px;
+}
+
+#tabsbar {
+    margin-bottom: -2px;
 }
 
 /* NOTE: You can change the colors for the tabs further below . . . .*/
@@ -59,6 +66,12 @@ h1.title {
 -webkit-border-top-left-radius:5px;
 -moz-border-radius-topright:5px;
 -webkit-border-top-right-radius:5px;
+}
+
+#header {
+    width: 90%;
+    text-align: center;
+    margin: 40px auto;
 }
 
 /*This div contains the whole dollmaker. It can be placed anywhere on the page and everything will follow
@@ -103,6 +116,7 @@ position: relative;
 width: 250px;
 height: 270px;
 text-align: center;
+padding: 30px 0;
 }
 
 /*#bodyArea img {position: absolute;}*/
@@ -121,8 +135,10 @@ width: 240px;
 padding: 0px 5px; */
 float: left;
 clear: left;
-width: 250px;
+width: 254px;
 margin-top: -2px;
+padding: 10px;
+box-sizing: border-box;
 }
 
 /* individual links for thumbnails */
@@ -144,7 +160,7 @@ position:relative;
 /* the title of that area */
 #swatchesArea h3 {
 font-size: 12px;
-font-weight: bold;
+font-weight: normal;
 clear: both;
 padding: 7px 0 5px 0;
 }
@@ -170,7 +186,7 @@ padding: 7px 0 5px 0;
     }
 
     .ui-tabs-panel {
-        width: 523px;
+        width: 528px;
     }
 }
 
@@ -181,7 +197,7 @@ padding: 7px 0 5px 0;
     }
 
     .ui-tabs-panel {
-        width: 423px;
+        width: 428px;
     }
 }
 
@@ -279,8 +295,8 @@ font-weight:normal;
 
 /*Selected tab. Change to your own colors!*/
 #tabsbar .ui-state-active a {
-border-bottom: 2px solid #fff;
-background-color: #fff; /* This needs to be the the same as the background color of the panel.*/
+border-bottom: 2px solid #eee;
+background-color: #eee; /* This needs to be the the same as the background color of the panel.*/
 position:relative;
 z-index:2;
 }
