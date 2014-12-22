@@ -40,6 +40,19 @@ $(document).ready(function() {
 		$("#bodyArea>img.skintone").attr("src", changeSrc);
 		return false;
 	}); 
+
+
+$( "#getscreenshot" ).click(function() {
+	var container = document.getElementById("imagesave");
+	    html2canvas([document.getElementById('dollmaker_container')], {
+    onrendered: function(canvas) {
+    container.appendChild(canvas);
+    }
+    });
+});
+	
+
+
 });
 
 	

@@ -8,6 +8,7 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
 <script src="scripts/drag.js"></script>
+<script src="scripts/html2canvas.js"></script>
 <script src="scripts/touchpunch.js"></script>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -39,7 +40,9 @@
 				<a href="base/Skintone/full/medium.png" class="skintone"><img src="base/Skintone/thumbnails/medium.png" alt="swatch"></a>
 				<a href="base/Skintone/full/dark.png" class="skintone"><img src="base/Skintone/thumbnails/dark.png" alt="swatch"></a>
 				<a href="base/Skintone/full/darkest.png" class="skintone"><img src="base/Skintone/thumbnails/darkest.png" alt="swatch"></a>
+
 			</div>
+			<button class="btn" id="getscreenshot">Get screenshot!</button>
 		</div>
 		<div id="right">
 			<div id="piecesArea">
@@ -137,7 +140,10 @@
 			</div><!--PiecesArea-->			
 		</div>
 	</div><!--container-->
-	<div class="footer">
+	<div id="imagesave">
+		<p>You can save the screenshot that appears in this box.</p>
+	</div>
+	<div class="footer" id="footer">
 		<p>&copy; Emma Winston 2014 under an MIT Open Source License. Merry Christmas!</p>
 	</div>
 </body>
