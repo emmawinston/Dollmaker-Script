@@ -28,9 +28,16 @@ $(document).ready(function() {
 		$("#piecesArea").tabs();
 	
 	//changes the body when thumbnails are clicked	
-	$("#swatchesArea a").click( function() {
+	$("#swatchesArea a.bg").click( function() {
 		var changeSrc = $(this).attr("href");
-		$("#bodyArea>img").attr("src", changeSrc);
+		$("#bodyArea>img.bg").attr("src", changeSrc);
+		return false;
+	}); 
+
+	//changes the body when thumbnails are clicked	
+	$("#swatchesArea a.skintone").click( function() {
+		var changeSrc = $(this).attr("href");
+		$("#bodyArea>img.skintone").attr("src", changeSrc);
 		return false;
 	}); 
 });
