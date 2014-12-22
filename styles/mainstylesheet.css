@@ -50,6 +50,7 @@ h1.title {
 
 #tabsbar {
     margin-bottom: -2px;
+    font-size: 0.9em;
 }
 
 /* NOTE: You can change the colors for the tabs further below . . . .*/
@@ -200,6 +201,10 @@ padding: 7px 0 5px 0;
     .ui-tabs-panel {
         width: 428px;
     }
+
+    #tabsbar {
+        font-size: 0.7em;
+    }
 }
 
 @media screen and (max-width: 770px) {
@@ -234,11 +239,7 @@ padding: 7px 0 5px 0;
     }
 
     #tabsbar li a {
-        padding: 3px 5px 4px; 
-    }
-
-    #tabsbar li a {
-        font-size: 0.66em;
+        font-size: 0.56em;
     }
 }
 
@@ -249,7 +250,7 @@ padding: 7px 0 5px 0;
     }
 
     #left {
-        margin-bottom: 20px;
+        margin-bottom: -20px;
     }
 
     .ui-tabs-panel, #tabsbar {
@@ -261,7 +262,7 @@ padding: 7px 0 5px 0;
     }
 
     #tabsbar li a {
-        font-size: 0.4em;
+        font-size: 0.3em;
     }
 }
 
